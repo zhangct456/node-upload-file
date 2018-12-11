@@ -28,7 +28,7 @@ router.post('/upload', (req, res) => {
 		}
         var fileName = files.file.name;		//上传文件名
         var fileNameArr = fileName.split('.');
-        if(fileNameArr != 1){
+        if(fileNameArr.length != 1){
         	//files.file.path：文件保存后的路径，无后缀名
         	//补上文件后缀
         	var newfile = files.file.path + '.' + fileNameArr[fileNameArr.length - 1];
